@@ -1,0 +1,8 @@
+<div class="btn-wrapper">
+  <input class="btn" type="file" id="file"
+    #csvReader
+    (change)="uploadEventListener($event)"
+    accept=".csv"
+  />
+  <label class="btn-label" for="file">Upload</label>
+</div>
