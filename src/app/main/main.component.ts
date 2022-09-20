@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onLoadCsvData(csvData: any) {
+  loadCsvData(csvData: any) {
     this.parseRawData(csvData);
   }
 
