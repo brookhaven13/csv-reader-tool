@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  csvData: any;
+  csvData: Array<string> = [];
 
   constructor() {}
 
@@ -14,10 +14,16 @@ export class MainComponent implements OnInit {
 
   loadCsvData(data: Array<string>) {
     // get csv file data from upload-button component emitter
-    this.csvData = data;
+    this.parseRawData(data);
   }
 
   parseRawData(data: Array<string>) {
     // Todo
+    let tmpArr: Array<string> = [];
+    data.forEach((e) => {
+      tmpArr.push(e);
+    });
+    this.csvData = tmpArr;
+    tmpArr = []; // init arr
   }
 }

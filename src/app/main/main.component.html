@@ -7,7 +7,10 @@
   
   <div class="result-section">
     <div class="title">Data read from .csv file</div>
-    <div class="content">{{ csvData }}</div>
+    <div class="content" *ngFor="let item of csvData; let i = index">
+      <div>({{ i }})</div>
+      <div>{{ item }}</div>
+    </div>
   </div>
 </div>
 
