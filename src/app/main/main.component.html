@@ -1,1 +1,13 @@
-<app-upload-button (uploadCsvData)="loadCsvData($event)"></app-upload-button>
+<div class="wrapper">
+  <div class="button-section">
+    <div>Click the button to upload your csv file.
+    </div>
+    <app-upload-button (uploadCsvData)="loadCsvData($event)"></app-upload-button>
+  </div>
+  
+  <div class="result-section">
+    <div class="title">Data read from .csv file</div>
+    <div class="content">{{ csvData }}</div>
+  </div>
+</div>
+
