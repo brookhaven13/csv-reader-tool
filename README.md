@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
-This tool would remove any '/\/r' in csv file. You can parse your data in ```TypeScript parseData()``` function. 
+This tool would remove any '/\/r' in csv file. You can parse your data in ```parseData()``` function.
 
 ## Development server
 
