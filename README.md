@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This tool would remove any '/\/r' in csv file. You can parse your data in ```parseData()``` function.
 
+![hqdefault](https://user-images.githubusercontent.com/36215483/191396668-70a50019-0fad-4b07-9a2a-fac8564117e2.jpg)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
