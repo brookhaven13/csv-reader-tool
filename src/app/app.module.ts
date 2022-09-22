@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 /* Material */
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 /* Component */
 import { AppComponent } from './app.component';
 import { UploadButtonComponent } from './upload-button/upload-button.component';
 import { MainComponent } from './main/main.component';
-import { SnackbarComponent } from './snackbar/snackbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -16,12 +16,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     UploadButtonComponent,
     MainComponent,
-    SnackbarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
