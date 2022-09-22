@@ -7,10 +7,19 @@
   
   <div class="result-section">
     <div class="title">Data read from .csv file</div>
-    <div class="content" *ngFor="let item of csvData; let i = index">
-      <div>({{ i }})</div>
-      <div>{{ item }}</div>
+    <div class="content">
+      <ng-container>
+        <div class="head">Row No.</div>
+        <div class="head">Content</div>
+      </ng-container>
+      <ng-container *ngFor="let item of csvData; let i = index">
+        <div class="body">{{ i + 1 }}</div>
+        <div class="body">{{ item }}</div>
+      </ng-container>
     </div>
+    <ng-container *ngIf="csvData.length === 0">
+      <div>The uploaded content would show here</div>
+    </ng-container>
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -21,7 +21,10 @@ export class MainComponent implements OnInit {
     // Todo
     let tmpArr: Array<string> = [];
     data.forEach((e) => {
-      tmpArr.push(e);
+      if (e.length > 0) {
+        // ignore empty row
+        tmpArr.push(e); 
+      }
     });
     this.csvData = tmpArr;
     tmpArr = []; // init arr
