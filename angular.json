@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "csv-tool": {
+    "csv-reader-tool": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/csv-tool",
+            "outputPath": "dist/csv-reader-tool",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "csv-tool:build:production"
+              "browserTarget": "csv-reader-tool:build:production"
             },
             "development": {
-              "browserTarget": "csv-tool:build:development"
+              "browserTarget": "csv-reader-tool:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "csv-tool:build"
+            "browserTarget": "csv-reader-tool:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "csv-tool"
+  "defaultProject": "csv-reader-tool"
 }
