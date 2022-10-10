@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-upload-button',
@@ -8,7 +9,8 @@ import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/cor
 export class UploadButtonComponent implements OnInit {
   @ViewChild('csvReader') csvReader: any;
   @Output() uploadCsvData: EventEmitter<any> = new EventEmitter();
-  constructor() {}
+
+  constructor(private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
 
@@ -25,6 +27,9 @@ export class UploadButtonComponent implements OnInit {
           let data: any = (<string>reader.result).split(/\r\n|\n/);
           this.uploadCsvData.emit(data);
         };
+        this.openSnackBar('File Uploaded', 3)
+      } else {
+        this.openSnackBar('Invalid File Format', 3);
       }
       this.resetFile();
     } catch (error) {
@@ -35,6 +40,22 @@ export class UploadButtonComponent implements OnInit {
 
   isValidCsvFile(file: any) {
     return file.name.endsWith('.csv');
+  }
+
+  /**
+   * Show Status Message
+   * @param mesg message
+   * @param second duration second before closing snackar
+   */
+  openSnackBar(mesg: string, second: number) {
+    this.snackBar.open(
+      mesg,
+      'OK',
+      {
+        duration: second * 1000,
+        horizontalPosition: 'center',
+      }
+    );
   }
 
   resetFile() {
